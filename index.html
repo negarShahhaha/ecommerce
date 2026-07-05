@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  
+  <title>Frontend Mentor | E-commerce product page</title>
+
+
+</head>
+<body>
+
+  <header class="header">
+    <div class="header__left">
+      <button class="menu-btn" aria-label="Open menu">
+        <img src="./images/icon-menu.svg" alt="">
+      </button>
+      <a href="#" class="logo">
+        <img src="./images/logo.svg" alt="Sneakers company logo">
+      </a>
+      <nav class="nav">
+          <button class="nav-close-btn" aria-label="Close menu">
+    <img src="./images/icon-close.svg" alt="">
+  </button>
+        <ul>
+          <li><a href="#">Collections</a></li>
+          <li><a href="#">Men</a></li>
+          <li><a href="#">Women</a></li>
+          <li><a href="#">About</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+
+    <div class="header__right">
+     <button class="cart-btn" aria-label="Open cart">
+  <img src="./images/icon-cart.svg" alt="">
+  <span class="cart-badge" hidden>0</span>
+</button>
+      <button class="avatar-btn" aria-label="User menu">
+        <img src="./images/image-avatar.png" alt="User avatar">
+      </button>
+      <div class="profile-dropdown" hidden>
+  <div class="profile-dropdown__header">
+    <img src="./images/image-avatar.png" alt="" class="profile-dropdown__avatar">
+    <div>
+      <p class="profile-dropdown__name">Ali Anderson</p>
+      <p class="profile-dropdown__email">ali.anderson@email.com</p>
+    </div>
+  </div>
+
+  <div class="profile-dropdown__body">
+    <p class="profile-dropdown__member-since">Member since March 2023</p>
+    <div class="profile-dropdown__loyalty">
+      <span class="loyalty-badge">Gold Member</span>
+      <span class="loyalty-points">1,250 points</span>
+    </div>
+  </div>
+</div>
+    </div>
+  </header>
+
+  <main class="product">
+
+ <section class="product-gallery">
+  <div class="main-image-wrapper">
+    <img src="./images/image-product-1.jpg" alt="Sneaker main view" class="main-image">
+    
+    <button class="gallery-prev" aria-label="Previous image">
+      <img src="./images/icon-previous.svg" alt="">
+    </button>
+    <button class="gallery-next" aria-label="Next image">
+      <img src="./images/icon-next.svg" alt="">
+    </button>
+  </div>
+
+  <div class="thumbnails">
+    <button class="thumbnail active">
+      <img src="./images/image-product-1-thumbnail.jpg" alt="View 1">
+    </button>
+    <button class="thumbnail">
+      <img src="./images/image-product-2-thumbnail.jpg" alt="View 2">
+    </button>
+    <button class="thumbnail">
+      <img src="./images/image-product-3-thumbnail.jpg" alt="View 3">
+    </button>
+    <button class="thumbnail">
+      <img src="./images/image-product-4-thumbnail.jpg" alt="View 4">
+    </button>
+  </div>
+</section>
+
+    <section class="product-info">
+      <p class="product-info__brand">Sneaker Company</p>
+      <h1 class="product-info__title">Fall Limited Edition Sneakers</h1>
+      <p class="product-info__desc">
+        These low-profile sneakers are your perfect casual wear companion.
+      </p>
+
+      <div class="product-info__price">
+        <span class="price-current">$125.00</span>
+        <span class="price-discount">50%</span>
+        <span class="price-old">$250.00</span>
+      </div>
+
+      <div class="product-info__cart-controls">
+        <div class="quantity">
+          <button class="quantity__decrease" aria-label="Decrease quantity">-</button>
+          <span class="quantity__value">0</span>
+          <button class="quantity__increase" aria-label="Increase quantity">+</button>
+        </div>
+        <button class="add-to-cart-btn">
+          <img src="./images/icon-cart.svg" alt="">
+          Add to cart
+        </button>
+      </div>
+    </section>
+
+  </main>
+
+<div class="cart-widget" hidden>
+  <div class="cart-widget__header">
+    <h2>Cart</h2>
+  </div>
+
+  <div class="cart-widget__body">
+    <!-- وقتی سبد خالیه -->
+    <p class="cart-empty-msg">Your cart is empty.</p>
+
+    <!-- وقتی محصول توی سبد هست (نمونه، بعداً با JS داینامیک می‌شه) -->
+    <div class="cart-item" hidden>
+      <img src="./images/image-product-1-thumbnail.jpg" alt="">
+      <div class="cart-item__info">
+        <p>Fall Limited Edition Sneakers</p>
+        <p>$125.00 x <span class="cart-item__qty">3</span>
+          <strong>$375.00</strong>
+        </p>
+      </div>
+      <button class="cart-item__delete" aria-label="Remove item">
+        <img src="./images/icon-delete.svg" alt="">
+      </button>
+    </div>
+
+    <button class="checkout-btn" hidden>Checkout</button>
+  </div>
+</div>
+<div class="lightbox" hidden>
+  <button class="lightbox-close" aria-label="Close lightbox">
+    <img src="./images/icon-close.svg" alt="">
+  </button>
+
+ <div class="lightbox__gallery">
+  <img src="./images/image-product-1.jpg" alt="Sneaker large view" class="lightbox__main-image">
+
+  <button class="gallery-prev" aria-label="Previous image">
+    <img src="./images/icon-previous.svg" alt="">
+  </button>
+  <button class="gallery-next" aria-label="Next image">
+    <img src="./images/icon-next.svg" alt="">
+  </button>
+
+  <div class="thumbnails">
+    <button class="thumbnail active">
+      <img src="./images/image-product-1-thumbnail.jpg" alt="View 1">
+    </button>
+    <button class="thumbnail">
+      <img src="./images/image-product-2-thumbnail.jpg" alt="View 2">
+    </button>
+    <button class="thumbnail">
+      <img src="./images/image-product-3-thumbnail.jpg" alt="View 3">
+    </button>
+    <button class="thumbnail">
+      <img src="./images/image-product-4-thumbnail.jpg" alt="View 4">
+    </button>
+  </div>
+</div>
+</div>
+  <script src="script.js"></script>
+</body>
+</html>
