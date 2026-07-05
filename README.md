@@ -40,8 +40,8 @@ As a Business Administration student exploring frontend development, I chose thi
 
 ## 👤 Author
 
-- Portfolio: [your-portfolio-link]
-- GitHub: [@yourusername]
+- Portfolio: [https://myportfolio-2xn.pages.dev/]
+- GitHub: [@negarShahhaha]
 
 
 
